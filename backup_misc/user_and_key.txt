@@ -1,0 +1,5 @@
+MongoDB Enterprise > db.config.users.find()
+{ "_id" : ObjectId("5a7872011350922771cacd38"), "un" : "vero@me.com", "cids" : [ ObjectId("5a7872011350922771cacd3e") ], "roles" : [ { "role" : "GLOBAL_OWNER" }, { "role" : "ORG_OWNER", "orgId" : ObjectId("5a7872011350922771cacd3c") }, { "role" : "GROUP_OWNER", "cid" : ObjectId("5a7872011350922771cacd3e") } ], "passHash" : "b5e40dfda61be606dd7ee8ff4c0c52d716b1c576e49f0c592d2ecacff4b2be6b", "cre" : ISODate("2018-02-05T15:02:25.550Z"), "pe" : "vero@me.com", "fn" : "Vero", "ln" : "Me", "lastPasswordUpdated" : ISODate("2018-02-05T15:02:25.550Z"), "lc" : 1, "ll" : ISODate("2018-02-05T15:02:25.575Z"), "lla" : "77.107.233.162", "llh" : null, "uiAuthCodes" : [ { "code" : "ceb1830f207a33f8861c4553f394b937-20180205", "created" : ISODate("2018-02-05T15:02:25.579Z") } ], "orgIds" : [ ObjectId("5a7872011350922771cacd3c") ], "currentOrgId" : ObjectId("5a7872011350922771cacd3c"), "ccid" : ObjectId("5a7872011350922771cacd3e"), "lastPageView" : ISODate("2018-02-05T15:02:25.897Z") }
+MongoDB Enterprise > db.config.agentApiKeys.find()
+MongoDB Enterprise > db.config.customers.findOne().k
+71cd8f92289b4030ba539a83111e79b2

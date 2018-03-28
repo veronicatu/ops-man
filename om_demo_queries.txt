@@ -1,0 +1,9 @@
+
+-- tunnel
+./tunnel-5ab6f5e6a018cb2ef28b3c5f -remote ec2-54-171-191-41.eu-west-1.compute.amazonaws.com:25999 -v
+
+-- export
+mongoexport -d yelp -c restaurants --query "{name:'Pink Onion'}" --out pink.out
+
+--import
+mongoimport --port 28000 -d yelp -c restaurants --file pink.out

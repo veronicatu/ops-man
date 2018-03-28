@@ -1,0 +1,19 @@
+---
+- hosts: opsManager
+  remote_user: ec2-user
+  become: yes
+  tasks:
+  - name: Create a Group
+    uri:
+      url: "{{opsmanagerurl}}/api/public/v1.0/groups?pretty=true"
+      method: POST
+      user: "user@demo.com"
+      password: "35879aa0-e977-441a-8456-ff7b014ef04f"
+      body_format: "json"
+      body: "{\"name\": \"Group Demo\" }"
+      status_code: 201
+    register: omgroup
+  - name: Write the group info to file
+    copy:
+      content: "{{ omgroup }}"
+      dest: "/home/ec2-user/omgroup.txt"

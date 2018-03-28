@@ -1,0 +1,10 @@
+---
+- hosts: local
+  tasks:
+  - shell: cat ../firstuser.json
+    register: result
+  - set_fact: myvar="{{ result.stdout | from_json }}"
+  - set_fact: username="{{ myvar.json.user.username }}"
+  - set_fact: apikey="{{ myvar.json.apiKey }}"
+  - debug: msg="user is  {{ username }}"
+  - debug: msg="key is {{apikey}}"

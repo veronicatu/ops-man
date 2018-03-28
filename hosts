@@ -1,0 +1,21 @@
+[local]
+localhost ansible_python_interpreter=/Users/veronica/anaconda2/bin/python
+
+[local:vars]
+rs_size=3
+rs_name=repset
+rs_mongod_ports=27001 27002 27003
+[opsManager]
+ec2-54-171-191-41.eu-west-1.compute.amazonaws.com ansible_user=ec2-user
+
+[opsManager:vars]
+opsmanagerurl=http://ec2-54-171-191-41.eu-west-1.compute.amazonaws.com:8080
+
+[ReplicaSet]
+ec2-34-244-202-67.eu-west-1.compute.amazonaws.com ansible_user=ec2-user
+ec2-34-245-6-202.eu-west-1.compute.amazonaws.com ansible_user=ec2-user
+ec2-34-245-176-5.eu-west-1.compute.amazonaws.com ansible_user=ec2-user
+
+[ReplicaSet:vars]
+opsmanagerurl=http://ec2-54-171-191-41.eu-west-1.compute.amazonaws.com:8080
+opsmanager=ec2-54-171-191-41.eu-west-1.compute.amazonaws.com
